@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -145,3 +146,5 @@ EMAIL_HOST_USER = 'vladislav.sizov.2002@gmail.com'
 EMAIL_HOST_PASSWORD = 'gorbol62mrsizov'
 DEFAULT_FROM_EMAIL = 'Vlad'
 DEFAULT_TO_EMAIL = 'SizovVlad02@yandex.ru'
+
+django_heroku.settings(locals())
