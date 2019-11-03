@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124e8fff-111c-4e0a-809c-782081f3c7da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copyfoto/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/copyfoto/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,11 +89,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/copyfoto/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -161,7 +169,6 @@
         <option value="$PROJECT_DIR$/templates/success.html" />
         <option value="$PROJECT_DIR$/send_email/templates/send_email/index.html" />
         <option value="$PROJECT_DIR$/send_email/views.py" />
-        <option value="$PROJECT_DIR$/copyfoto/settings.py" />
         <option value="$PROJECT_DIR$/copyfoto/urls.py" />
         <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/core/forms.py" />
@@ -170,6 +177,7 @@
         <option value="$PROJECT_DIR$/static/css/all.css" />
         <option value="$PROJECT_DIR$/core/templates/core/send.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/copyfoto/settings.py" />
       </list>
     </option>
   </component>
@@ -191,6 +199,16 @@
             <path>
               <item name="copyfoto" type="b2602c69:ProjectViewProjectNode" />
               <item name="copyfoto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="copyfoto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="copyfoto" type="462c0819:PsiDirectoryNode" />
+              <item name="copyfoto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="copyfoto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="copyfoto" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="copyfoto" type="b2602c69:ProjectViewProjectNode" />
@@ -302,12 +320,12 @@
       <workItem from="1571578842102" duration="10110000" />
       <workItem from="1571677031381" duration="14497000" />
       <workItem from="1571936751647" duration="31650000" />
-      <workItem from="1572700297904" duration="10080000" />
+      <workItem from="1572700297904" duration="10306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66337000" />
+    <option name="totallyTimeSpent" value="66563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
@@ -367,7 +385,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/copyfoto/settings.py</url>
-          <line>133</line>
+          <line>134</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -544,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/copyfoto/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="139" column="24" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -633,6 +644,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/copyfoto/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
         </state>
       </provider>
     </entry>
