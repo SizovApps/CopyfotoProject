@@ -29,7 +29,7 @@ class PortfolioCreate(LoginRequiredMixin, View):
         return render(request, 'core/portfolio_create.html', context={'form': form})
 
     def post(self,request):
-        bound_form = PortfolioForm(request.POST)
+        bound_form = PortfolioForm(request.POST, request.FILES)
 
         if bound_form.is_valid():
             new_prod = bound_form.save()
@@ -55,7 +55,7 @@ class ProdCreate(LoginRequiredMixin, View):
         return render(request, 'core/product_create.html', context={'form': form})
 
     def post(self,request):
-        bound_form = ProdForm(request.POST)
+        bound_form = ProdForm(request.POST, request.FILES)
 
         if bound_form.is_valid():
             new_prod = bound_form.save()
@@ -73,7 +73,7 @@ class ProdUpdate(LoginRequiredMixin, View):
 
     def post(self, request, slug):
         prod = Prod.objects.get(slug__iexact=slug)
-        bound_form = ProdForm(request.POST, instance=prod)
+        bound_form = ProdForm(request.POST, request.FILES, instance=prod)
 
         if bound_form.is_valid():
             new_prod = bound_form.save()
@@ -89,7 +89,7 @@ class ServiceCreate(LoginRequiredMixin, View):
         return render(request, 'core/service_create.html', context={'form': form})
 
     def post(self,request):
-        bound_form = ServicesForm(request.POST)
+        bound_form = ServicesForm(request.POST, request.FILES)
 
         if bound_form.is_valid():
             new_service = bound_form.save()
@@ -107,7 +107,7 @@ class ServiceUpdate(LoginRequiredMixin, View):
 
     def post(self, request, slug):
         service = Service.objects.get(slug__iexact=slug)
-        bound_form = ServicesForm(request.POST, instance=service)
+        bound_form = ServicesForm(request.POST, request.FILES, instance=service)
 
         if bound_form.is_valid():
             new_serv = bound_form.save()

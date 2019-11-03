@@ -29,7 +29,7 @@ class Service(models.Model):
     fill100 = models.CharField(max_length=150, db_index=True, default='', blank=True)
     quantity = models.CharField(max_length=150, db_index=True, default='')
     description = models.TextField()
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.ImageField(default='default.jpg', upload_to='products_pics')
 
     def __str__(self):
         return self.name
