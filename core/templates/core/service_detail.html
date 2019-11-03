@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-detail-out">
+        <div class="contentDetail">
+
+            <div class="row">
+                <div class="col-1">
+                    <a href="{% url 'services_list' %}">
+                        <div class="backIcon">
+                            <img src="{% static 'img/backArrow.png' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5">
+                    <div class="detailImg">
+                        <img class="" src="{{ service.image.url }}" alt="">
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div class="detailText">
+                        <h1 class="">{{ service.name }}</h1>
+                        <p class="">{{ service.description }}</p>
+
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th scope="col">Количество:</th>
+                                {% for quant in quantity %}
+                                    <th scope="col">От {{ quant }}</th>
+                                {% endfor %}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if is50 == 0 and  is10 == 0 %}
+                                <tr>
+                                    <td>Стоимость:</td>
+                                    {% for price in fill100 %}
+                                        <td>{{ price }} руб</td>
+                                    {% endfor %}
+                                </tr>
+                            {% else %}
+                                {% if is10 != 0 %}
+                                    <tr>
+                                        <td>Чертеж/текст:</td>
+                                        {% for price in fill10 %}
+                                            <td>{{ price }} руб</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endif %}
+                                {% if is50 != 0 %}
+                                    <tr>
+                                        <td>Заливка меньше 50%:</td>
+                                        {% for price in fill50 %}
+                                            <td>{{ price }} руб</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endif %}
+                                {% if is100 != 0 %}
+                                    <tr>
+                                        <td>Заливка больше 50%:</td>
+                                        {% for price in fill100 %}
+                                            <td>{{ price }} руб</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endif %}
+                            {% endif %}
+
+
+                            </tbody>
+                        </table>
+
+                        <a href=""><button class="">Рассчитать стоимость</button></a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block admin-panel %}
+        <a href="{{ service.get_update_url }}" class="btn btn-primary">Обновить услугу</a>
+{% endblock %}
+

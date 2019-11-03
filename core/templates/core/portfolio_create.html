@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-add">
+        <div class="addText">
+            <h1 class="">Добавление работы</h1>
+        </div>
+
+        <div class="formProd">
+            <form enctype="multipart/form-data" class=" border border-light p-5" action="{% url 'portfolio_create_url' %}" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        <div class="alert alert-danger">
+                            {{ field.errors}}
+                        </div>
+                    {% endif %}
+
+                    <p class="formLabel">{{ field.label }}:</p>
+                    {{ field }}
+                {% endfor %}
+
+                <button type="submit" class="">Добавить работу</button>
+
+            </form>
+        </div>
+
+        <div class="instruction">
+            <h1 class="">Инструкция</h1>
+            <ol >
+                <li>Заполниете поле "name" - Введите название работы</li>
+                <li>Заполниете поле "slug" - Введите символы, которые будут отображаться в адресной строке браузера при просмотре работы</li>
+                <li>Заполниете поле "price" - Введите цену за данную работу</li>
+                <li>Заполниете поле "timeOfWork" - Введите время, за которое была выполнена работа</li>
+                <li>Заполниете поле "description" - Введите описание работы</li>
+                <li>Загрузите изображение в поле "image"</li>
+                <li>Нажмите на кнопку "Добавить работу"</li>
+            </ol>
+        </div>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-add">
+        <div class="addText">
+            <h1 class="">Добавление товара</h1>
+        </div>
+
+        <div class="formProd">
+            <form class=" border border-light p-5" action="{% url 'product_create_url' %}" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        <div clasas="alert alert-danger">
+                            {{ field.errors}}
+                        </div>
+                    {% endif %}
+
+                    <p class="formLabel">{{ field.label }}:</p>
+                    {{ field }}
+                {% endfor %}
+
+                <button type="submit" class="">Добавить товар</button>
+
+            </form>
+        </div>
+        <div class="instruction">
+            <h1 class="">Инструкция</h1>
+            <ol >
+                <li>Заполниете поле "name" - Введите название товара</li>
+                <li>Заполниете поле "price" - Введите стоимость товара</li>
+                <li>Заполниете поле "slug" - Введите символы, которые будут отображаться в адресной строке браузера при просмотре товара</li>
+                <li>Заполниете поле "author" - Введите производителя товара</li>
+                <li>Заполниете поле "description" - Введите описание товара</li>
+                <li>Загрузите изображение в поле "image"</li>
+                <li>Нажмите на кнопку "Добавить товар"</li>
+            </ol>
+        </div>
+    </div>
+
+
+{% endblock %}

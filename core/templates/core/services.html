@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-list">
+        <div class="labelOur">
+            <h1 class="">Наши услуги</h1>
+        </div>
+        <div class="row">
+
+            {% for service in services %}
+                <div class="col-lg-3 col-md-12 mb-lg-0">
+                    <div class="product">
+                        <div class="productImg">
+                            <a href="{{ service.get_absolute_url }}"><img src="{{ service.image.url }}"></a>
+                        </div>
+
+                        <div class="productText">
+                            <h2 class="">{{ service.name }}</h2>
+                            <p class="">{{ service.description|truncatechars:35 }}
+                            </p>
+                            <a href="{{ service.get_absolute_url }}"><button class="">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

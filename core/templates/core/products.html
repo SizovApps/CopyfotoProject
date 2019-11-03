@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-list">
+        <div class="labelOur">
+            <h1 class="">Наши товары</h1>
+        </div>
+        <div class="row">
+
+            {% for product in prods %}
+                <div class="col-lg-3 col-md-12 mb-lg-0">
+                    <div class="product">
+                        <div class="productImg">
+                            <a href="{{ product.get_absolute_url }}"><img src="{{ product.image.url }}"></a>
+                        </div>
+
+                        <div class="productText">
+                            <h2 class="">{{ product.name }}</h2>
+                            <p class="">{{ product.description|truncatechars:35 }}
+                            </p>
+                            <a href="{{ product.get_absolute_url }}"><button class="">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

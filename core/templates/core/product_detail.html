@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-detail-out">
+        <div class="contentDetail">
+
+            <div class="row">
+                <div class="col-1">
+                    <a href="{% url 'products_list' %}">
+                    <div class="backIcon">
+                        <img src="{% static 'img/backArrow.png' %}" alt="">
+                    </div>
+                        </a>
+                </div>
+                <div class="col-5">
+                    <div class="detailImg">
+                        <img class="" src="{{ product.image.url }}" alt="">
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div class="detailText">
+                        <h1 class="">{{ product.name }}</h1>
+                        <p class="">{{ product.description }}</p>
+
+                        <h3>Цена: {{ product.price }}</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block admin-panel %}
+        <a href="{{ product.get_update_url }}" class="btn btn-primary">Обновить товар</a>
+{% endblock %}
+

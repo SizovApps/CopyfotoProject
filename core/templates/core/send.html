@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-add">
+{% if sent == 1 %}
+    <div class="labelOur">
+            <h1 class="">Ваш заказ отправлен!</h1>
+        </div>
+{% else %}
+<div class="labelOur">
+            <h1 class="">Заказ онлайн</h1>
+        </div>
+<div class="formProd">
+            <form enctype="multipart/form-data" class=" border border-light p-5" action="{% url 'send_online_url' %}" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        <div class="alert alert-danger">
+                            {{ field.errors}}
+                        </div>
+                    {% endif %}
+
+                    <p class="formLabel">{{ field.label }}:</p>
+                    {{ field }}
+                {% endfor %}
+
+                <button type="submit" class="">Сделать заказ</button>
+
+            </form>
+
+        </div>
+{% endif %}
+</div>
+
+
+{% endblock %}

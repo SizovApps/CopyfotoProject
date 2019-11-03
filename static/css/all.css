@@ -1,0 +1,509 @@
+* {
+  font-size: 100.01%; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  margin: 0;
+  height: 100%;
+  font: 1.3rem/1.61538 "Montserrat", sans-serif; }
+
+p {
+  font-family: "Source Sans Pro", sans-serif; }
+
+
+.logo {
+  float: left;
+  margin: 0 0 0 15px;
+  width: 151px;
+  height: 41px; }
+
+.social-placeholder {
+  padding: 9px 0 0;
+  height: 35px; }
+
+.social-placeholder img {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto; }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 31px 0 32px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(196, 194, 202, 0.23);
+}
+  #header .btn {
+    float: right;
+    margin: 2px 0 0 59px;
+    height: 38px;
+    min-width: 145px;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 22px;
+    letter-spacing: 0; }
+
+  header div.logo img{
+    max-width: 350px;
+  }
+
+#nav {
+  overflow: hidden;
+  text-align: right;
+  font-size: 0;
+  letter-spacing: -4px;
+  white-space: nowrap; }
+  #nav .nav-drop {
+    overflow: hidden; }
+  #nav ul {
+    padding: 9px 0 5px;
+    margin: 0; }
+  #nav li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.6rem;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    white-space: normal;
+    margin: 0 0 0 34px; }
+    #nav li a {
+      display: block;
+      color: #635C73; }
+      #nav li a:hover {
+        text-decoration: none;
+        color: #8d81ac; }
+
+.nav-opener {
+  display: none;
+  float: right;
+  width: 31px;
+  height: 31px;
+  position: relative;
+  text-indent: -9999px;
+  overflow: hidden; }
+
+.nav-opener:before, .nav-opener:after, .nav-opener span {
+  background: #333;
+  border-radius: 4px;
+  position: absolute;
+  top: 17px;
+  left: 3px;
+  right: 3px;
+  height: 3px;
+  margin-top: -2px;
+  /* height/2 */
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+
+.nav-opener:before {
+  content: '';
+  top: 8px;
+  left: 30%; }
+
+.nav-opener:after {
+  content: '';
+  top: 26px; }
+
+.nav-active .nav-opener span {
+  opacity: 0; }
+
+.nav-opener:hover {
+  opacity: .9; }
+
+.nav-active .nav-opener:after, .nav-active .nav-opener:before {
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 16px;
+  left: 5%;
+  right: 5%; }
+
+.nav-active .nav-opener:after {
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+
+.labelOur{
+  text-align: center;
+}
+.labelOur h1{
+  color: #858585;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+.visual {
+  min-height: 904px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #8d81ac;
+  font-size: 0;
+  letter-spacing: -4px;
+  padding: 104px 0 0;
+  background: #000; }
+  .visual .bg-stretch {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .visual > .container {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: 0; }
+  .visual h1 {
+    margin: 0 0 10px;
+    font-size: 8.2rem;
+    line-height: 1.12;
+    font-weight: bold;
+    color: #e3dfed; }
+  .visual p {
+    margin: 10px }
+    .visual p.tagline {
+      line-height: 1.1;
+      font-size: 2.6rem; }
+  .visual .info {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #494654;
+    text-transform: uppercase; }
+  .visual .text-block {
+    padding: 90px 0; }
+
+#cta {
+  position: relative;
+  z-index: 1;
+  margin: -80px 0 55px;
+  text-align: center;
+  color: #848e97;
+  font-size: 1.4rem;
+  line-height: 1.28571428; }
+#cta .btn {
+    margin: 0 0 16px;
+    height: 62px;
+    font-size: 2.1rem;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 17px;
+    min-width: 390px; }
+  #cta p {
+    margin: 0 0 18px; }
+
+
+
+.text-box {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.524;
+  color: #716E79;
+  padding-bottom: 23px; }
+.text-box h2 {
+  margin: 0 0 20px;
+  font-size: 60px;
+  line-height: 1.148;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.text-box li {
+  list-style: none;
+  margin: 0 0 35px; }
+
+.rounded {
+  border-radius: 40px; }
+
+
+.main {
+  padding: 47px 0; }
+
+.main .content {
+  padding: 25px 15px 23px;
+  font-size: 1.3rem;
+  line-height: 1.615;
+  color: #848e97; }
+
+.main h3 {
+  margin: 0 0 46px;
+  font-size: 2.8rem;
+  line-height: 1.285;
+  font-weight: 300;
+  color: #D3D1DA; }
+
+.main h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: bold; }
+.style-01 .main h4 {
+  margin: 0 0 7px; }
+
+.main p {
+  margin: 0 0 23px; }
+.main .date {
+  display: block;
+  margin: -5px 0 0;
+  padding: 0 0 22px; }
+.main .btn-holder {
+    padding: 32px 0 0; }
+
+.area {
+  padding: 77px 0 47px;
+  background: #f4f4f4; }
+.area h2 {
+  margin: 0 0 28px;
+  font-size: 4rem;
+  line-height: 1.107;
+  font-weight: bold; }
+
+.slide-holder {
+  padding: 0 0 0 65px; }
+.slide-holder .img-slide {
+  position: relative;
+  margin: 0 0 -140px; }
+.slide-holder .img-slide img {
+  position: relative;
+  top: 0;
+  left: -20px; }
+
+.content {
+  margin: 200px 300px;
+}
+.content-add{
+  margin: 150px 300px;
+}
+.content-detail {
+  margin: 130px 150px;
+}
+.content-list{
+  margin: 160px 100px 0 100px;
+}
+.content-detail-out{
+  margin-top: 150px;
+}
+
+
+/*-----------------------
+-------------------------
+-----PRODUCT_DETAIL------
+-------------------------
+-------------------------
+*/
+
+div.contentDetail{
+  margin-right: 100px;
+  margin-left: 30px;
+}
+div.backIcon{
+  width: 100%;
+  height: 80px;
+}
+div.backIcon img{
+  height: 100%;
+  width: 100%;
+}
+div.detailImg img{
+  width: 100%;
+  max-height: 500px;
+}
+div.detailText{
+  text-align: left;
+}
+div.detailText h1{
+  font-size: 40px;
+}
+div.detailText p{
+  color: #848380;
+  font-size: 20px;
+}
+div.detailText h3{
+  margin-top: 30px;
+  font-size: 20px;
+}
+div.detailText button{
+  margin: 20px 0;
+  background-color: #7800ff;
+  height: 40px;
+  width: 200px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none
+}
+
+/*-----------------------
+-------------------------
+---------CREATE----------
+-------------------------
+-------------------------
+*/
+
+div.addText{
+  text-align: center;
+  margin-bottom: 15px;
+}
+div.addText h1{
+  font-size: 40px;
+  font-weight: bolder;
+  color: #6d6d6d;
+}
+div.formProd p{
+  font-size: 20px;
+}
+div.formProd input{
+  font-size: 15px;
+}
+div.formProd textarea{
+  font-size: 15px;
+}
+div.formProd button{
+  margin: 20px 33%;
+  background-color: #7800ff;
+  height: 50px;
+  width: 300px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none
+}
+div.instruction h1{
+  margin: 20px 39%;
+  font-size: 30px;
+  color: #6d6d6d;
+}
+
+
+/*-----------------------
+-------------------------
+--------PRODUCT----------
+-------------------------
+-------------------------
+*/
+
+div.product{
+  border: solid #000000 1px;
+  height: 400px;
+  margin: 5px 0;
+}
+div.product div.productImg{
+  height: 250px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+div.product div.productImg img{
+  width: 100%;
+  max-height: 100%;
+}
+div.product div.productText{
+  padding: 10px;
+}
+div.product div.productText h2{
+  width: 100%;
+
+}
+div.product div.productText p{
+  color: #848380;
+  font-size: 15px;
+}
+div.product div.productText button{
+  text-align: center;
+  background-color: #7800ff;
+  height: 40px;
+  width: 200px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none;
+  margin: 0 13%;
+}
+
+
+/*-----------------------
+-------------------------
+-------PORTFOLIO---------
+-------------------------
+-------------------------
+*/
+
+div.work{
+  height: 450px;
+  border: solid #000000 1px;
+  margin: 5px;
+  padding: 0;
+}
+div.work div.workImg{
+  height: 300px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+div.work img{
+  max-height: 100%;
+  width: 100%;
+
+}
+div.work div.workText{
+  padding: 0 10px;
+}
+div.work div.workText h2{
+  font-size: 30px;
+}
+
+div.work div.workText p{
+  color: #848380;
+  font-size: 15px;
+}
+div.work div.workText button{
+  text-align: center;
+  background-color: #7800ff;
+  height: 40px;
+  width: 200px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none;
+}
+
+
+/*-----------------------
+-------------------------
+----------ADMIN----------
+-------------------------
+-------------------------
+*/
+
+.admin-panel{
+  border: 1px solid #999;
+  border-radius: 2px;
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+  opacity: 0.3;
+  padding: 15px;
+}
+.admin-panel a{
+  display: block;
+  margin: 5px 0;
+}
+.admin-panel:hover{
+  opacity: 1;
+}

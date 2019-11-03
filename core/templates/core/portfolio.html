@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-detail">
+        <div class="container">
+            <div class="labelOur">
+                <h1 class="" style="padding-top: 30px;">Наши работы</h1>
+            </div>
+            <div class="row">
+                {% for work in works %}
+                    <div class="col-4">
+                    <div class="work">
+                        <div class="workImg">
+                            <a href="{{ work.get_absolute_url }}"><img src="{{ work.image.url }}" alt=""></a>
+                        </div>
+                        <div class="workText">
+                            <h2>{{ work.name }}</h2>
+                                <p>{{ work.description }}</p>
+                            <a href="{{ work.get_absolute_url }}"><button class="">Посмотреть работу</button></a>
+                        </div>
+                    </div>
+                    </div>
+                {% endfor %}
+
+
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="content-detail">
+    <div class="container login-f">
+      <div class="row">
+        <form class="col s12 m6 offset-m3" action="{% url 'success'%}" id="form" method="POST">
+        {% csrf_token %}
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Signup for Newsletter</span>
+              <div class="input-field col s12">
+                <input id="email" type="email" name="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+              <div class="col s12">
+                <input type="checkbox" class="filled-in" name="checkbox" id="test5" />
+                <label for="test5">Welcome Email</label>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="#" onclick="isEmail(document.getElementById('email').value)">SignUp</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">&copy; 2015 Copyright Muhammad Yasoob
+        </div>
+      </div>
+    </footer>
+</div>
+    {% endblock %}

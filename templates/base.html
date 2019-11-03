@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Распечатка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+		<header id="header">
+			<div class="container-fluid">
+				<div class="logo"><a href="{% url 'main_page' %}"><img src="{% static 'img/copyfotoWhite.jpg' %}" alt="FORKIO"></a></div>
+				<nav id="nav" style="margin-right: 50px">
+					<div class="opener-holder">
+						<a href="#" class="nav-opener"><span></span></a>
+					</div>
+					<a href="{% url 'send_online_url' %}" class="btn btn-primary">Заказ online</a>
+					<div class="nav-drop">
+						<ul>
+							<li class="active visible-sm visible-xs"><a href="{% url 'main_page' %}">Главная</a></li>
+                            <li><a href="{% url 'services_list' %}">Услуги</a></li>
+                            <li><a href="{% url 'products_list' %}">Товары</a></li>
+							<li><a href="{% url 'portfolio_list' %}">Наши работы</a></li>
+
+						</ul>
+						<div class="drop-holder visible-sm visible-xs">
+							<span>Мы в соц сетях</span>
+							<ul class="social-networks">
+								<li><a class="fa fa-twitter" href="#"></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+        {% block content %}
+
+        {% endblock %}
+
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        <div class="admin-panel align-items-center">
+        <a href="/admin" class="btn btn-outline-info">Admin</a>
+        {% block admin-panel %}
+        <a href="{% url 'product_create_url' %}" class="btn btn-primary">Добавить продукт</a>
+        <a href="{% url 'service_create_url' %}" class="btn btn-primary">Добавить услугу</a>
+        <a href="{% url 'portfolio_create_url' %}" class="btn btn-primary">Добавить работу</a>
+        {% endblock %}
+        </div>
+        {% endif %}
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.main.js"></script>
+</body>
+</html>

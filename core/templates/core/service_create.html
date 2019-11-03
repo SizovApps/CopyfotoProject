@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-add">
+        <div class="addText">
+            <h1 class="">Добавление услуги</h1>
+        </div>
+
+        <div class="formProd">
+            <form enctype="multipart/form-data" class=" border border-light p-5" action="{% url 'service_create_url' %}" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        <div class="alert alert-danger">
+                            {{ field.errors}}
+                        </div>
+                    {% endif %}
+
+                    <p class="formLabel">{{ field.label }}:</p>
+                    {{ field }}
+                {% endfor %}
+
+                <button type="submit" class="">Добавить услугу</button>
+
+            </form>
+        </div>
+
+        <div class="instruction">
+            <h1 class="">Инструкция</h1>
+            <ol >
+                <li>Заполниете поле "name" - Введите название услуги</li>
+                <li>Заполниете поле "price" - Через пробел вводите стоимость услуги для определенного числа экземпляров,
+                    количество которых будет указано в поле "quantity"</li>
+                <li>Заполниете поле "quantity" - Через пробел вводите количество экземпляров</li>
+                <li>Заполниете поле "slug" - Введите символы, которые будут отображаться в адресной строке браузера при просмотре услуги</li>
+                <li>Заполниете поле "description" - Введите описание услуги</li>
+                <li>Загрузите изображение в поле "image"</li>
+                <li>Нажмите на кнопку "Добавить услугу"</li>
+            </ol>
+        </div>
+
+    </div>
+
+
+{% endblock %}
