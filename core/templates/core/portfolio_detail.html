@@ -34,3 +34,8 @@
 
     </div>
 {% endblock %}
+
+
+{% block admin-panel %}
+        <a href="{% url 'portfolio_delete_url' slug=work.slug %}" class="btn btn-primary">Удалить работу</a>
+{% endblock %}
