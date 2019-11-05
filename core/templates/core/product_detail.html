@@ -35,5 +35,6 @@
 
 {% block admin-panel %}
         <a href="{{ product.get_update_url }}" class="btn btn-primary">Обновить товар</a>
+        <a href="{% url 'product_delete_url' slug=product.slug %}" class="btn btn-primary">Обновить товар</a>
 {% endblock %}
 
