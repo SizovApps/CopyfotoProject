@@ -86,5 +86,6 @@
 
 {% block admin-panel %}
         <a href="{{ service.get_update_url }}" class="btn btn-primary">Обновить услугу</a>
+        <a href="{% url 'service_delete_url' slug=service.slug %}" class="btn btn-primary">Удалить услугу</a>
 {% endblock %}
 

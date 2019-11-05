@@ -10,8 +10,8 @@
             <form class=" border border-light p-5 text-center mb-5" action="{% url 'service_delete_url' slug=service.slug %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 <h3>Вы уверене что хотите удалить "{{ service.name }}"?</h3>
-                <a href="{% url 'service_detail_url' slug=service.slug %}">Назад</a>
-                <button class="btn btn-danger" type="submit" name="">Удалить</button>
+                <a class="ml-3" href="{% url 'service_detail_url' slug=service.slug %}">Назад</a>
+                <button class="btn btn-danger mr-3" type="submit" name="">Удалить</button>
 
 
             </form>
