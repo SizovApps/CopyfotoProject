@@ -6,7 +6,7 @@ from .models import Prod, Service, Work, Price
 from .forms import ProdForm, ServicesForm, PortfolioForm, SendForm
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 
 
 def main_page(request):
@@ -164,7 +164,13 @@ def send_online(request):
             subject = name
             message = '''{0} 
             Ссылка на документы - {1}'''.format(info, url)
-            send_mail(subject, message, 'vladislav.sizov.2002@gmail.com', ['SizovVlad02@yandex.ru'])
+            email = EmailMessage(
+                subject,
+                message,
+                'vladislav.sizov.2002@gmail.com',
+                ['SizovVlad02@yandex.ru'],
+            )
+            email.send()
             sent = True
     else:
         form = SendForm()
