@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'send_email.apps.SendEmailConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
