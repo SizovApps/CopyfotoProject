@@ -155,7 +155,7 @@ def service_detail(request, slug):
 def send_online(request):
     sent = False
     if request.method=='POST':
-        form = SendForm(request.POST)
+        form = SendForm(request.POST, request.FILES)
         if form.is_valid():
             cd = form.cleaned_data
             name = cd['name']
