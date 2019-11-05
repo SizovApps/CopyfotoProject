@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-add">
+        <div class="addText">
+            <h1 class="">Обновление товара</h1>
+        </div>
+
+        <div class="formProd">
+            <form class=" border border-light p-5" action="{% 'product_delete_url' %}" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <h3>Вы уверене что хотите удалить "{{ prod.title }}"?</h3>
+                <a href="{% url 'product_detail_url' slug=prod.slug %}">Назад</a>
+                <button type="submit" name="btn btn-danger"></button>
+
+                <button type="submit" name="button" class="">Удалить</button>
+
+            </form>
+        </div>
+        <div class="instruction">
+            <h1 class="">Инструкция</h1>
+            <ol >
+                <li>Измените необходимые поля</li>
+                <li>Изменить поле 'slug'</li>
+                <li>Нажмите на кнопку "Обновить товар"</li>
+            </ol>
+        </div>
+    </div>
+
+
+{% endblock %}

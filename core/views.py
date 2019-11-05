@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.urls import reverse
 from django.views.generic import View
 from .models import Prod, Service, Work, Price
 from .forms import ProdForm, ServicesForm, PortfolioForm, SendForm
@@ -85,6 +86,17 @@ class ProdUpdate(LoginRequiredMixin, View):
         return render(request, 'core/product_update_form.html', context={'form': bound_form, 'prod': prod})
 
     raise_exception = True
+
+
+class ProdDelete(View):
+    def get(self,request, slug):
+        prod = Prod.objects.get(slug__iexact=slug)
+        return render(request, 'core/product_delete_form.html', context={'prod': prod})
+
+    def post(self, request,slug):
+        prod = Prod.objects.get(slug__iexact=slug)
+        prod.delete()
+        return redirect(reverse('products_list'))
 
 
 class ServiceCreate(LoginRequiredMixin, View):
