@@ -47,12 +47,12 @@
 
         {% if request.user.is_authenticated and request.user.is_staff %}
         <div class="admin-panel align-items-center">
-        <a href="/admin" class="btn btn-outline-info">Admin</a>
         {% block admin-panel %}
         <a href="{% url 'product_create_url' %}" class="btn btn-primary">Добавить продукт</a>
         <a href="{% url 'service_create_url' %}" class="btn btn-primary">Добавить услугу</a>
         <a href="{% url 'portfolio_create_url' %}" class="btn btn-primary">Добавить работу</a>
         {% endblock %}
+        <a href="{% url 'logout' %}" class="btn btn-outline-info">Выйти</a>
         </div>
         {% endif %}
 
