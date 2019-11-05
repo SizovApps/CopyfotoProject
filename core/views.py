@@ -194,10 +194,10 @@ def send_online(request):
             cd = form.cleaned_data
             name = cd['name']
             info = cd['info']
-            url = cd['url']
+            phone = cd['phone']
             subject = name
             message = '''{0} 
-            Ссылка на документы - {1}'''.format(info, url)
+            Телефон - {1}'''.format(info, phone)
             email = EmailMessage(
                 subject,
                 message,

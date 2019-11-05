@@ -79,11 +79,11 @@ class PortfolioForm(forms.ModelForm):
 
 class SendForm(forms.Form):
     name = forms.CharField(label='Ваше имя', max_length=100)
-    url = forms.CharField(label='Ссылка на диск', max_length=100)
+    phone = forms.CharField(label='Ваш телефон', max_length=100)
     info = forms.CharField(widget=forms.Textarea, label='Информация о заказе')
     file = forms.FileField()
 
     name.widget.attrs.update({'class': 'form-control'})
     info.widget.attrs.update({'class': 'form-control'})
-    url.widget.attrs.update({'class': 'form-control'})
+    phone.widget.attrs.update({'class': 'form-control'})
 
