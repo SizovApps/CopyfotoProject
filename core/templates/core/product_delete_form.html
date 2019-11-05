@@ -9,21 +9,14 @@
         <div class="formProd">
             <form class=" border border-light p-5" action="{% url 'product_delete_url' slug=prod.slug %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
-                <h3>Вы уверене что хотите удалить "{{ prod.title }}"?</h3>
+                <h3>Вы уверене что хотите удалить "{{ prod.name }}"?</h3>
                 <button href="{% url 'product_detail_url' slug=prod.slug %}">Назад</button>
                 <button class="toDel" type="submit" name="btn btn-danger">Удалить</button>
 
 
             </form>
         </div>
-        <div class="instruction">
-            <h1 class="">Инструкция</h1>
-            <ol >
-                <li>Измените необходимые поля</li>
-                <li>Изменить поле 'slug'</li>
-                <li>Нажмите на кнопку "Обновить товар"</li>
-            </ol>
-        </div>
+
     </div>
 
 
