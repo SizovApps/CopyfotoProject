@@ -6,8 +6,8 @@ from PIL import Image
 class Prod(models.Model):
     name = models.CharField(max_length=150, db_index=True)
     price = models.PositiveIntegerField()
-    slug = models.SlugField(max_length=150, db_index=True, blank=True)
-    author = models.CharField(max_length=150)
+    slug = models.SlugField(max_length=150, db_index=True)
+    author = models.CharField(max_length=150, blank=True)
     description = models.TextField()
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 

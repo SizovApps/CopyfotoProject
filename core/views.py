@@ -13,6 +13,10 @@ def main_page(request):
     return render(request, 'core/main.html')
 
 
+def about(request):
+    return render(request, 'core/about.html')
+
+
 def portfolio_list(request):
     works = Work.objects.all()[::-1]
     return render(request, 'core/portfolio.html', context={'works': works})
