@@ -25,6 +25,7 @@ urlpatterns = [
     path('portfolio/', portfolio_list, name='portfolio_list'),
     path('portfolio/create/', PortfolioCreate.as_view(), name='portfolio_create_url'),
     path('portfolio/<str:slug>/', portfolio_detail, name='portfolio_detail_url'),
+    path('portfolio/<str:slug>/delete', PortfolioDelete.as_view(), name='portfolio_delete_url'),
 ]
 
 if settings.DEBUG:

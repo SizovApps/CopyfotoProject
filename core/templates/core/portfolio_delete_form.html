@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content-add">
+        <div class="addText">
+            <h1 class="">Удаление работы</h1>
+        </div>
+
+        <div class="formDel">
+            <form class=" border border-light p-5 text-center mb-5" action="{% url 'portfolio_delete_url' slug=work.slug %}" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <h3 class="mb-5">Вы уверене что хотите удалить "{{ work.name }}"?</h3>
+                <a style="margin-right: 30px;" class="ml-3" href="{% url 'portfolio_detail_url' slug=work.slug %}">Назад</a>
+                <button style="margin-left: 30px;" class="btn btn-danger mr-3" type="submit" name="">Удалить</button>
+
+
+            </form>
+        </div>
+
+    </div>
+
+
+{% endblock %}

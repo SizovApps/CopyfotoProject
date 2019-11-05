@@ -44,6 +44,17 @@ class PortfolioCreate(LoginRequiredMixin, View):
     raise_exception = True
 
 
+class PortfolioDelete(LoginRequiredMixin, View):
+    def get(self, request, slug):
+        work = Work.objects.get(slug__iexact=slug)
+        return render(request, 'core/portfolio_delete_form.html', context={'work': work})
+
+    def post(self, request, slug):
+        work = Work.objects.get(slug__iexact=slug)
+        work.delete()
+        return redirect(reverse('portfolio_list'))
+
+
 def products_list(request):
     prods = Prod.objects.all()[::-1]
     return render(request, 'core/products.html', context={'prods': prods})
