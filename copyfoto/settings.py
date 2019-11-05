@@ -147,4 +147,7 @@ EMAIL_HOST_PASSWORD = 'gorbol62mrsizov'
 DEFAULT_FROM_EMAIL = 'Vlad'
 DEFAULT_TO_EMAIL = 'SizovVlad02@yandex.ru'
 
+LOGIN_REDIRECT_URL = 'logSucc'
+
+
 django_heroku.settings(locals())
