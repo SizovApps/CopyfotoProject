@@ -20,6 +20,7 @@ urlpatterns = [
     path('service/create/', ServiceCreate.as_view(), name='service_create_url'),
     path('services/<str:slug>/', service_detail, name='service_detail_url'),
     path('services/<str:slug>/update', ServiceUpdate.as_view(), name='service_update_url'),
+    path('services/<str:slug>/delete', ServiceDelete.as_view(), name='service_delete_url'),
 
     path('portfolio/', portfolio_list, name='portfolio_list'),
     path('portfolio/create/', PortfolioCreate.as_view(), name='portfolio_create_url'),

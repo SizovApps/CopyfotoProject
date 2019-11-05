@@ -88,7 +88,7 @@ class ProdUpdate(LoginRequiredMixin, View):
     raise_exception = True
 
 
-class ProdDelete(View):
+class ProdDelete(LoginRequiredMixin, View):
     def get(self,request, slug):
         prod = Prod.objects.get(slug__iexact=slug)
         return render(request, 'core/product_delete_form.html', context={'prod': prod})
@@ -131,6 +131,17 @@ class ServiceUpdate(LoginRequiredMixin, View):
         return render(request, 'core/service_update_form.html', context={'form': bound_form, 'service': service})
 
     raise_exception = True
+
+
+class ServiceDelete(LoginRequiredMixin, View):
+    def get(self, request, slug):
+        service = Service.objects.get(slug__iexact=slug)
+        return render(request, 'core/service_delete_form.html', context={'service': service})
+
+    def post(self, request, slug):
+        service = Service.objects.get(slug__iexact=slug)
+        service.delete()
+        return redirect(reverse('services_list'))
 
 
 def services_list(request):

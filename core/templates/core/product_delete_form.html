@@ -6,7 +6,7 @@
             <h1 class="">Удаление товара</h1>
         </div>
 
-        <div class="formProd">
+        <div class="formDel">
             <form class=" border border-light p-5 text-center mb-5" action="{% url 'product_delete_url' slug=prod.slug %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 <h3>Вы уверене что хотите удалить "{{ prod.name }}"?</h3>

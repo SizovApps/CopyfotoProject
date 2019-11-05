@@ -540,6 +540,25 @@ div.secondAbout{
   margin-bottom: 50px;
 }
 
+
+/*-----------------------
+-------------------------
+---------DELETE----------
+-------------------------
+-------------------------
+*/
+
+div.formDel p{
+  font-size: 20px;
+}
+div.formDel input{
+  font-size: 15px;
+}
+div.formDel textarea{
+  font-size: 15px;
+}
+
+
 /*-----------------------
 -------------------------
 ----------ADMIN----------
