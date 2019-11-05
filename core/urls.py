@@ -8,7 +8,7 @@ from .views import *
 urlpatterns = [
     path('', main_page, name='main_page'),
     path('mail/', send_online, name='send_online_url'),
-    path('about_us/', about, naem='about_url'),
+    path('about_us/', about, name='about_url'),
 
     path('products/', products_list, name='products_list'),
     path('product/create/', ProdCreate.as_view(), name='product_create_url'),
