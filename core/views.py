@@ -170,6 +170,9 @@ def send_online(request):
                 'SizovVlad02@yandex.ru',
                 ['SizovVlad02@yandex.ru']
             )
+            if request.FILES:
+                uploaded_file = request.FILES['file']
+                email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
             email.send()
             sent = True
     else:
