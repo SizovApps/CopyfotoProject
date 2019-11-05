@@ -10,8 +10,8 @@
             <form class=" border border-light p-5 text-center mb-5" action="{% url 'product_delete_url' slug=prod.slug %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 <h3 class="mb-5">Вы уверене что хотите удалить "{{ prod.name }}"?</h3>
-                <a class="ml-3" href="{% url 'product_detail_url' slug=prod.slug %}">Назад</a>
-                <button class="btn btn-danger mr-3" type="submit" name="">Удалить</button>
+                <a style="margin-right: 30px;" href="{% url 'product_detail_url' slug=prod.slug %}">Назад</a>
+                <button style="margin-left: 30px;" class="btn btn-danger mr-3" type="submit" name="">Удалить</button>
 
 
             </form>
