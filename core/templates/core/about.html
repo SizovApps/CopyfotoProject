@@ -2,4 +2,53 @@
 {% load static %}
 {% block content %}
 
+<div class="content-list">
+    <div class="labelOur">
+            <h1 class="">О нас</h1>
+   </div>
+
+    <div class="aboutUs">
+        <div class="row">
+            <div class="col-6">
+                <img src="{% static 'img/ourPlace1.jpg' %}" alt="">
+            </div>
+            <div class="col-6">
+                <div class="aboutText">
+                    <h1>Адрес:</h1>
+                    <p>Москва, Нижний Сусальный переулок, дом. 5, стр. 1, этаж 2</p>
+                    <h1>Как нас найти:</h1>
+                    <p>Выход из метро в сторону театра имени Гоголя, ул.Казакова</p>
+                    <p>После турникетов по средней лестнице наверх и далее по указателям в тоннеле</p>
+                    <p>После выхода из тоннеля прямо 180 м по правой стороне</p>
+                    <p>Ориентир: вход в копицентр находится напротив магазина "Продуктоша"</p>
+                    <p>Заблудились? Звоните!</p>
+                </div>
+            </div>
+            </div>
+            <div class="row secondAbout">
+            <div class="col-6">
+                <div class="aboutText">
+                    <h1>Наши телефоны:</h1>
+                    <p>+7 (926) 829-61-22</p>
+                    <p>+7 (915) 212-97-98</p>
+                    <h1 class="pt-5">Наша почта:</h1>
+                    <p>kopifoto.arma@mail.ru</p>
+                    <p>kopifoto.arma@gmail.com</p>
+                    <h1 class="pt-5">Режим работы:</h1>
+                    <p>пн-пт: 09:00-21:00</p>
+                    <p>сб-вск: 10:00-18:00</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="aboutText">
+                    <img class="borderNeed" src="{% static 'img/ourPlace2.jpg' %}" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
 {% endblock %}

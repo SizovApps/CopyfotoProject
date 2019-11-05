@@ -118,14 +118,7 @@ p {
 .nav-opener:hover {
   opacity: .9; }
 
-.nav-active .nav-opener:after, .nav-active .nav-opener:before {
-  -moz-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 16px;
-  left: 5%;
-  right: 5%; }
+
 
 .nav-active .nav-opener:after {
   -moz-transform: rotate(-45deg);
@@ -196,7 +189,7 @@ p {
   color: #848e97;
   font-size: 1.4rem;
   line-height: 1.28571428; }
-#cta .btn {
+  #cta .btn {
     margin: 0 0 16px;
     height: 62px;
     font-size: 2.1rem;
@@ -207,7 +200,42 @@ p {
   #cta p {
     margin: 0 0 18px; }
 
-
+.cta-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+  letter-spacing: -4px;
+  white-space: nowrap;
+  color: #848e97; }
+  .cta-list li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    font-size: 1.4rem;
+    line-height: 1.285;
+    letter-spacing: 0;
+    white-space: normal; }
+  .cta-list .btn {
+    position: relative;
+    margin: 0 0 15px;
+    height: 50px;
+    line-height: 30px;
+    padding: 10px 50px;
+    min-width: 240px; }
+    .cta-list .btn i {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      font-size: 2.4rem;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .cta-list .btn i.fa-twitter {
+        font-size: 2rem; }
+      .cta-list .btn i.fa-facebook {
+        font-size: 1.6rem; }
 
 .text-box {
   text-align: center;
@@ -215,16 +243,16 @@ p {
   line-height: 1.524;
   color: #716E79;
   padding-bottom: 23px; }
-.text-box h2 {
-  margin: 0 0 20px;
-  font-size: 60px;
-  line-height: 1.148;
-  text-transform: uppercase;
-  font-weight: bold; }
+  .text-box h2 {
+    margin: 0 0 20px;
+    font-size: 60px;
+    line-height: 1.148;
+    text-transform: uppercase;
+    font-weight: bold; }
 
-.text-box li {
-  list-style: none;
-  margin: 0 0 35px; }
+  .text-box li {
+    list-style: none;
+    margin: 0 0 35px; }
 
 .rounded {
   border-radius: 40px; }
@@ -233,54 +261,55 @@ p {
 .main {
   padding: 47px 0; }
 
-.main .content {
-  padding: 25px 15px 23px;
-  font-size: 1.3rem;
-  line-height: 1.615;
-  color: #848e97; }
+  .main .content {
+    padding: 25px 15px 23px;
+    font-size: 1.3rem;
+    line-height: 1.615;
+    color: #848e97; }
 
-.main h3 {
-  margin: 0 0 46px;
-  font-size: 2.8rem;
-  line-height: 1.285;
-  font-weight: 300;
-  color: #D3D1DA; }
+  .main h3 {
+    margin: 0 0 46px;
+    font-size: 2.8rem;
+    line-height: 1.285;
+    font-weight: 300;
+    color: #D3D1DA; }
 
-.main h4 {
-  margin: 0 0 12px;
-  font-size: 16px;
-  line-height: 1.625;
-  font-weight: bold; }
-.style-01 .main h4 {
-  margin: 0 0 7px; }
+  .main h4 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: bold; }
 
-.main p {
-  margin: 0 0 23px; }
-.main .date {
-  display: block;
-  margin: -5px 0 0;
-  padding: 0 0 22px; }
-.main .btn-holder {
+    .style-01 .main h4 {
+      margin: 0 0 7px; }
+
+  .main p {
+    margin: 0 0 23px; }
+  .main .date {
+    display: block;
+    margin: -5px 0 0;
+    padding: 0 0 22px; }
+  .main .btn-holder {
     padding: 32px 0 0; }
 
 .area {
   padding: 77px 0 47px;
   background: #f4f4f4; }
-.area h2 {
-  margin: 0 0 28px;
-  font-size: 4rem;
-  line-height: 1.107;
-  font-weight: bold; }
+  .area h2 {
+    margin: 0 0 28px;
+    font-size: 4rem;
+    line-height: 1.107;
+    font-weight: bold; }
 
 .slide-holder {
   padding: 0 0 0 65px; }
-.slide-holder .img-slide {
-  position: relative;
-  margin: 0 0 -140px; }
-.slide-holder .img-slide img {
-  position: relative;
-  top: 0;
-  left: -20px; }
+  .slide-holder .img-slide {
+    position: relative;
+    margin: 0 0 -140px; }
+    .slide-holder .img-slide img {
+      position: relative;
+      top: 0;
+      left: -20px; }
 
 .content {
   margin: 200px 300px;
@@ -483,6 +512,33 @@ div.work div.workText button{
   outline: none;
 }
 
+
+/*-----------------------
+-------------------------
+----------About----------
+-------------------------
+-------------------------
+*/
+
+div.aboutUs img{
+  width: 100%;
+}
+div.aboutUs img.borderNeed{
+  border: 3px solid #000000;
+}
+div.aboutText h1{
+  font-size: 35px;
+}
+div.aboutText p{
+  color: #848380;
+  font-size: 20px;
+}
+div.secondAbout{
+  border-top: 1px solid #000000;
+  padding-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 /*-----------------------
 -------------------------
