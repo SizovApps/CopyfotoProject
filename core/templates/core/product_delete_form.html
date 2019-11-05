@@ -11,7 +11,7 @@
                 {% csrf_token %}
                 <h3>Вы уверене что хотите удалить "{{ prod.name }}"?</h3>
                 <a href="{% url 'product_detail_url' slug=prod.slug %}">Назад</a>
-                <button class="toDel" type="submit" name="btn btn-danger">Удалить</button>
+                <button class="btn btn-danger" type="submit" name="">Удалить</button>
 
 
             </form>
