@@ -3,17 +3,16 @@
 {% block content %}
     <div class="content-add">
         <div class="addText">
-            <h1 class="">Обновление товара</h1>
+            <h1 class="">Удаление товара</h1>
         </div>
 
         <div class="formProd">
             <form class=" border border-light p-5" action="{% url 'product_delete_url' slug=prod.slug %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 <h3>Вы уверене что хотите удалить "{{ prod.title }}"?</h3>
-                <a href="{% url 'product_detail_url' slug=prod.slug %}">Назад</a>
-                <button type="submit" name="btn btn-danger"></button>
+                <button href="{% url 'product_detail_url' slug=prod.slug %}">Назад</button>
+                <button class="toDel" type="submit" name="btn btn-danger">Удалить</button>
 
-                <button type="submit" name="button" class="">Удалить</button>
 
             </form>
         </div>
