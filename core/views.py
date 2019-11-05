@@ -164,7 +164,7 @@ def send_online(request):
             subject = name
             message = '''{0} 
             Ссылка на документы - {1}'''.format(info, url)
-            send_mail(subject, message, 'vladislav.sizov.2002@gmail.com', ['SizovVlad02@yandex.ru'])
+            send_mail(subject, message, 'SizovVlad02@yandex.ru', ['SizovVlad02@yandex.ru'])
             sent = True
     else:
         form = SendForm()

@@ -140,13 +140,11 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'SizovVlad02@yandex.ru'
+EMAIL_HOST_PASSWORD = 'Gorbol62mrsizov'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'vladislav.sizov.2002@gmail.com'
-EMAIL_HOST_PASSWORD = 'gorbol62mrsizov'
-DEFAULT_FROM_EMAIL = 'Vlad'
-DEFAULT_TO_EMAIL = 'SizovVlad02@yandex.ru'
+EMAIL_USE_TLS = True
 
 LOGIN_REDIRECT_URL = 'logSucc'
 
