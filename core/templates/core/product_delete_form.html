@@ -7,7 +7,7 @@
         </div>
 
         <div class="formProd">
-            <form class=" border border-light p-5" action="{% url 'product_delete_url' slug=prod.slug %}" enctype="multipart/form-data" method="POST">
+            <form class=" border border-light p-5 text-center" action="{% url 'product_delete_url' slug=prod.slug %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 <h3>Вы уверене что хотите удалить "{{ prod.name }}"?</h3>
                 <button href="{% url 'product_detail_url' slug=prod.slug %}">Назад</button>
